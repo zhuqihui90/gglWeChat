@@ -1,0 +1,31 @@
+<!--pages/register/register.wxml-->
+<view id="total">
+<form bindsubmit="create_zhuce">
+<view id="t1">
+<text>姓名</text><input type="text" name="username" id="use" placeholder="填写宝宝的姓名" value="{{username}}"></input>
+</view>
+<view id="t2">
+<text>性别</text>
+<radio-group  bindchange="handleChange" id="pass1">
+<radio   color="black" value="male">男</radio>
+<radio  color="red" value="female" >女</radio>
+</radio-group>
+</view>
+<view id="t3" class="section">
+<text>出生年月</text>
+<picker mode="date" fields="month" value="{{date}}" start="2010-01-01" end="2020-12-31" bindchange="bindDateChange" >
+    <view class="picker" id="pass4" >
+     {{date}}
+    </view>
+</picker>
+</view>
+<view id="t4">
+<text>手机号</text><input type="text" name="username" id="pass2" placeholder="输入家长的手机号" value="{{password2}}"></input>
+</view>
+<view id="t5">
+<text>邮 箱</text><input type="text" name="username" id="pass3" placeholder="输入家长的邮箱" value="{{phone}}"></input>
+</view>
+<button id="btn1" bindtap="go" form-type="submit"><text>注册</text></button>
+</form>
+</view>
+
